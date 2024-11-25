@@ -1,23 +1,22 @@
 {
-  "name": "webmenedzser/uvb-connector",
-  "description": "UVB API Connector",
+  "name": "utanvet-ellenor/client-php",
+  "description": "Utánvét Ellenőr PHP client library",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "1.5.0.1",
+  "version": "2.0.0-beta-1",
   "authors": [
     {
-      "name": "Ottó Radics",
-      "email": "otto@webmenedzser.hu",
-      "homepage": "https://www.webmenedzser.hu"
+      "name": "Utánvét Ellenőr",
+      "email": "hello@utanvet-ellenor.hu",
+      "homepage": "https://utanvet-ellenor.hu"
     }
   ],
   "require": {
-    "php": ">=7.1",
-    "guzzlehttp/guzzle": "^5.3 || ^6.3 || ^7.3"
+    "php": ">=7.4 || >=8.0"
   },
   "autoload": {
     "psr-4": {
-      "webmenedzser\\UVBConnector\\": "src"
+      "UtanvetEllenor\\": "src"
     }
   }
 }
