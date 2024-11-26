@@ -17,9 +17,7 @@ Then use your framework's autoload, or simply add:
   require 'vendor/autoload.php';
 ```
 
-## Manual installation
-
-If you wish to omit using Composer altogether, you can download the sources from the repository and use any [PSR-4](http://www.php-fig.org/psr/psr-4/) compatible autoloader.
+> **Manual installation** – If you wish to omit using Composer altogether, you can download the sources from the repository and use any [PSR-4](http://www.php-fig.org/psr/psr-4/) compatible autoloader.
 
 ## Getting started
 
@@ -120,7 +118,9 @@ Order status changes are the endorsed and ideal events to trigger these API call
 
 ## Sandbox environment
 
-By setting the `sandbox` parameter of the Client to true, the library will use the sandbox environment instead of the production one. **Please use this only when you are experimenting with your shop or integration. _Do not use it in production!_**
+By setting the `sandbox` parameter on the Client to true, it will use the sandbox environment instead of the production one. 
+
+**Please use this only when you are experimenting with your shop or integration. _Do not use it in production!_**
 
 ```php
   use UtanvetEllenor/Client;
