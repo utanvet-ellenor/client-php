@@ -29,6 +29,17 @@ The `Client` class takes care of the communication between your app and the Utá
 
 ### Get Customer reputation from Utánvét Ellenőr API 2.0
 
+| parameter       | e-mail only | multiple parameters | 
+|-----------------|:--------------------:|:----------------------------:|
+| **email**       |          ✅           |              ✅               |
+| **threshold**   |          ✅           |              ✅               |
+| **phoneNumber** |          ❌           |              ✅               |
+| **countryCode** |          ❌           |              ✅               |
+| **postalCode**  |          ❌           |              ✅               |
+| **addressLine** |          ❌           |              ✅               |
+
+For basic verification, `email` and `threshold` are mandatory, while for extended verification, all parameters are required.
+
 #### Query by e-mail only: 
 
 ```php
