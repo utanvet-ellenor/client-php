@@ -29,17 +29,6 @@ The `Client` class takes care of the communication between your app and the Utá
 
 ### Get Customer reputation from Utánvét Ellenőr API 2.0
 
-| parameter       | e-mail only | multiple parameters | 
-|-----------------|:--------------------:|:----------------------------:|
-| **email**       |          ✅           |              ✅               |
-| **threshold**   |          ✅           |              ✅               |
-| **phoneNumber** |          ❌           |              ✅               |
-| **countryCode** |          ❌           |              ✅               |
-| **postalCode**  |          ❌           |              ✅               |
-| **addressLine** |          ❌           |              ✅               |
-
-For basic verification, `email` and `threshold` are mandatory, while for extended verification, all parameters are required.
-
 #### Query by e-mail only: 
 
 ```php
@@ -83,6 +72,20 @@ The API answers with a JSON string, while `$client->sendRequest();` will result 
 }
 ```
 
+#### Required parameters
+
+For basic verification, `email` and `threshold` are mandatory, while for extended verification, all parameters are required.
+
+| parameter       | e-mail only | multiple parameters | 
+|-----------------|:--------------------:|:----------------------------:|
+| **email**       |          ✅           |              ✅               |
+| **threshold**   |          ✅           |              ✅               |
+| **phoneNumber** |          ❌           |              ✅               |
+| **countryCode** |          ❌           |              ✅               |
+| **postalCode**  |          ❌           |              ✅               |
+| **addressLine** |          ❌           |              ✅               |
+
+#### Display results
 If you would like to display these values, use the numeric `reputation` and/or `good` and `bad` values. Avoid aliasing these values with phrases, as they might mislead users.
  
 > #### Examples of using the API responses in a UI:
