@@ -72,7 +72,7 @@ The API answers with a JSON string, while `$client->sendRequest();` will result 
 }
 ```
 
-If you would like to display these values, use the numeric `totalRate` and/or `good` and `bad` values. Avoid aliasing these values with phrases, as they might mislead users.
+If you would like to display these values, use the numeric `reputation` and/or `good` and `bad` values. Avoid aliasing these values with phrases, as they might mislead users.
  
 > #### Examples of using the API responses in a UI:
 > 
