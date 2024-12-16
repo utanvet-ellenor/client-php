@@ -91,14 +91,14 @@ The API will return an HTTP 200 status code if the request is processed, regardl
 
 For basic verification, `email` and `threshold` are mandatory, while for extended verification, all parameters are required.
 
-| parameter       | e-mail only | multiple parameters | 
-|-----------------|:--------------------:|:----------------------------:|
-| **email**       |          ✅           |              ✅               |
-| **threshold**   |          ✅           |              ✅               |
-| **phoneNumber** |          ❌           |              ✅               |
-| **countryCode** |          ❌           |              ✅               |
-| **postalCode**  |          ❌           |              ✅               |
-| **addressLine** |          ❌           |              ✅               |
+| parameter        |  e-mail only  | multiple parameters |
+|------------------|:-------------:|:-------------------:|
+| **email**        |       ✅       |         ✅         |
+| **threshold**    |       ✅       |         ✅         |
+| **phoneNumber**  |       ❌       |         ✅         |
+| **countryCode**  |       ❌       |         ✅         |
+| **postalCode**   |       ❌       |         ✅         |
+| **addressLine**  |       ❌       |         ✅         |
 
 #### Display results
 If you would like to display these values, use the numeric `reputation` and/or `good` and `bad` values. Avoid aliasing these values with phrases, as they might mislead users.
