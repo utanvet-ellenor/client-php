@@ -116,6 +116,8 @@ If you would like to display these values, use the numeric `reputation` and/or `
 > - Too much failed deliveries. (How much is "too much"?)
 > - Bad customer reputation. (What reputation is considered "bad"?)
 
+Suggested labels (and their translations) can be found in the `Reasons` class of the `utanvet-ellenor/client-php` repository: [https://github.com/utanvet-ellenor/client-php](https://github.com/utanvet-ellenor/client-php)
+
 ### Send Signal (order outcome) to Utánvét Ellenőr API 2.0
 
 Order status changes are the endorsed and ideal events to trigger these API calls.
