@@ -85,8 +85,8 @@ The API will return an HTTP 200 status code if the request is processed, regardl
 | **Mailbox does not exist.**                                                                    |     204     |
 | **No Signals were found.**                                                                     |     404     |
 | **Total rate did not meet the minimum threshold set.**                                         |     200     |
-| **Signals found, checks passed.**                                                              |     200     |
 | **User opted out of the processing of their personal data.**                                   |     451     |
+| **Signals found, checks passed.**                                                              |     200     |
 
 #### Required parameters
 
