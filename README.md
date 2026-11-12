@@ -67,7 +67,8 @@ The API answers with a JSON string, while `$client->sendRequest();` will result 
         "bad": 5,
         "reputation": -0.25,
         "blocked": true,
-        "reason": "Total rate did not meet the minimum threshold set."
+        "reason": "Total rate did not meet the minimum threshold set.",
+        "reasonCode": "THRESHOLD_NOT_MET"
     }
 }
 ```
@@ -76,17 +77,17 @@ The API answers with a JSON string, while `$client->sendRequest();` will result 
 
 The API will return an HTTP 200 status code if the request is processed, regardless its result. The `status` value might be different based on the result of the request.  
 
-| reason                                                                                         | status code |
-|------------------------------------------------------------------------------------------------|:-----------:|
-| **Test hash was used.**                                                                        |     200     |
-| **Run out of request quota for current billing period, upgrade your subscription to resolve!** |     402     |
-| **Active exception found for this hash in your account.**                                      |     200     |
-| **Temporary e-mail was used.**                                                                 |     204     |
-| **Mailbox does not exist.**                                                                    |     204     |
-| **No Signals were found.**                                                                     |     404     |
-| **Total rate did not meet the minimum threshold set.**                                         |     200     |
-| **User opted out of the processing of their personal data.**                                   |     451     |
-| **Signals found, checks passed.**                                                              |     200     |
+| reason                                                                                        | reasonCode             | status code |
+|-----------------------------------------------------------------------------------------------|------------------------|:-----------:|
+| **Test hash was used.**                                                                        | `TEST_HASH`            |     200     |
+| **Run out of request quota for current billing period, upgrade your subscription to resolve!** | `OUT_OF_QUOTA`         |     402     |
+| **Active exception found for this hash in your account.**                                       | `EXCEPTION_FOUND`      |     200     |
+| **Temporary e-mail was used.**                                                                 | `TEMP_EMAIL`           |     204     |
+| **Mailbox does not exist.**                                                                    | `MAILBOX_NON_EXISTENT` |     204     |
+| **No Signals were found.**                                                                     | `NOT_FOUND`            |     404     |
+| **Total rate did not meet the minimum threshold set.**                                          | `THRESHOLD_NOT_MET`    |     200     |
+| **User opted out of the processing of their personal data.**                                    | `OPTED_OUT`            |     451     |
+| **Signals found, checks passed.**                                                              | `PASSED`               |     200     |
 
 #### Required parameters
 
@@ -117,6 +118,14 @@ If you would like to display these values, use the numeric `reputation` and/or `
 > - Bad customer reputation. (What reputation is considered "bad"?)
 
 Suggested labels (and their translations) can be found in the `Reasons` class of the `utanvet-ellenor/client-php` repository: [https://github.com/utanvet-ellenor/client-php](https://github.com/utanvet-ellenor/client-php)
+
+To get the reason label in Hungarian, pass the response's `reasonCode` to `Reasons::getLabel()`:
+
+```php
+  use UtanvetEllenor\Reasons;
+
+  $label = Reasons::getLabel($response->result->reasonCode, 'hu');
+```
 
 ### Send Signal (order outcome) to Utánvét Ellenőr API 2.0
 
