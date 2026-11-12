@@ -32,7 +32,7 @@ The `Client` class takes care of the communication between your app and the Utá
 #### Query by e-mail only: 
 
 ```php
-  use UtanvetEllenor/Client;
+  use UtanvetEllenor\Client;
 
   $client = new Client('publicApiKey', 'privateApiKey');
   $client->email = 'dummy-fail@utanvet-ellenor.hu';
@@ -44,7 +44,7 @@ The `Client` class takes care of the communication between your app and the Utá
 #### Query by multiple parameters:
 
 ```php
-  use UtanvetEllenor/Client;
+  use UtanvetEllenor\Client;
 
   $client = new Client('publicApiKey', 'privateApiKey');
   $client->email = 'dummy-fail@utanvet-ellenor.hu';
@@ -123,7 +123,7 @@ Suggested labels (and their translations) can be found in the `Reasons` class of
 Order status changes are the endorsed and ideal events to trigger these API calls.
 
 ```php
-  use UtanvetEllenor/Client;
+  use UtanvetEllenor\Client;
 
   $client = new Client('publicApiKey', 'privateApiKey');
   $client->email = 'dummy-fail@utanvet-ellenor.hu';
@@ -155,7 +155,7 @@ By setting the `sandbox` parameter on the Client to true, it will use the sandbo
 **Please use this only when you are experimenting with your shop or integration. _Do not use it in production!_**
 
 ```php
-  use UtanvetEllenor/Client;
+  use UtanvetEllenor\Client;
 
   $client = new Client('publicApiKey', 'privateApiKey');
   $client->email = 'dummy-fail@utanvet-ellenor.hu';
